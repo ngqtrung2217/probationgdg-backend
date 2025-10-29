@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const { User } = require("../models");
-const { HTTP_STATUS, ERROR_MESSAGES } = require("../utils/constants");
+const { HTTP_STATUS, ERROR_MESSAGES } = require("../config/constants");
 const config = require("../config/env");
 
 const generateToken = (user) => {
@@ -10,8 +10,8 @@ const generateToken = (user) => {
       email: user.email,
       role: user.role,
     },
-    config.jwt.secret,
-    { expiresIn: config.jwt.expiresIn }
+    config.jwtSecret,
+    { expiresIn: config.jwtExpire }
   );
 };
 

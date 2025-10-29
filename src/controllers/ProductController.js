@@ -4,7 +4,7 @@ const {
   ERROR_MESSAGES,
   SUCCESS_MESSAGES,
   PAGINATION,
-} = require("../utils/constants");
+} = require("../config/constants");
 const { Op } = require("sequelize");
 
 // Get prodcut (pagination, filter, search)
@@ -32,6 +32,8 @@ const getProducts = async (req, res, next) => {
     if (minPrice) where.price[Op.gte] = minPrice;
     if (maxPrice) where.price[Op.lte] = maxPrice;
     if (shopId) where.shopId = shopId;
+
+    const offset = (page - 1) * limit;
 
     const { count, rows } = await Product.findAndCountAll({
       where,

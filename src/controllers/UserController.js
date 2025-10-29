@@ -3,7 +3,7 @@ const {
   HTTP_STATUS,
   ERROR_MESSAGES,
   SUCCESS_MESSAGES,
-} = require("../utils/constants");
+} = require("../config/constants");
 
 // PUT /api/users/:id
 

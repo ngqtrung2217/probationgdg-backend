@@ -60,6 +60,14 @@ const ERROR_MESSAGES = {
   INVALID_TOKEN: "Token không hợp lệ",
   EXPIRED_TOKEN: "Token đã hết hạn",
   INTERNAL_ERROR: "Lỗi máy chủ nội bộ",
+  BAD_REQUEST: "Yêu cầu không hợp lệ",
+  WRONG_PASSWORD: "Mật khẩu hiện tại không đúng",
+  SEARCH_QUERY_TOO_SHORT: "Truy vấn tìm kiếm quá ngắn",
+  SHOP_NAME_TOO_SHORT: "Tên cửa hàng quá ngắn",
+  PRODUCT_NAME_TOO_SHORT: "Tên sản phẩm quá ngắn",
+  USER_ALREADY_EXISTS: "Người dùng đã tồn tại",
+  USER_DONT_HAVE_SHOP: "Người dùng không có cửa hàng",
+  REVIEW_NOT_FOUND: "Đánh giá không tìm thấy",
 };
 
 const SUCCESS_MESSAGES = {
@@ -69,6 +77,15 @@ const SUCCESS_MESSAGES = {
   PRODUCT_CREATED: "Sản phẩm được tạo thành công",
   PRODUCT_UPDATED: "Sản phẩm được cập nhật thành công",
   PRODUCT_DELETED: "Sản phẩm được xóa thành công",
+  PROFILE_UPDATED: "Cập nhật hồ sơ thành công",
+  PASSWORD_CHANGED: "Đổi mật khẩu thành công",
+  SHOP_CREATED: "Cửa hàng được tạo thành công",
+  SHOP_UPDATED: "Cửa hàng được cập nhật thành công",
+  REVIEW_CREATED: "Đánh giá được tạo thành công",
+  REVIEW_APPROVED: "Đánh giá được phê duyệt thành công",
+  REVIEW_REJECTED: "Đánh giá đã bị từ chối",
+  REVIEW_DELETED: "Đánh giá đã bị xóa",
+  SHOP_DELETED: "Cửa hàng đã bị xóa",
 };
 
 module.exports = {

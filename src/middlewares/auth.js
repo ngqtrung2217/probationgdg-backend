@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 const { HTTP_STATUS, ERROR_MESSAGES } = require("../config/constants");
 const config = require("../config/env");
 
-// check jwt token, hop le -> cho di tiep
+// check jwt token, valid -> next, invalid -> 401
 
 const authenticate = (req, res, next) => {
   try {
@@ -32,7 +32,7 @@ const authenticate = (req, res, next) => {
   }
 };
 
-// check quyen
+// check role
 
 const authorize = (roles = []) => {
   return (req, res, next) => {
@@ -67,7 +67,6 @@ const optionalAuthenticate = (req, res, next) => {
 
     next();
   } catch (error) {
-    // ignore error
     next();
   }
 };

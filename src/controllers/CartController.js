@@ -1,5 +1,9 @@
 const { Cart, CartItem, Product } = require("../models");
-const { HTTP_STATUS, ERROR_MESSAGES } = require("../config/constants");
+const {
+  HTTP_STATUS,
+  ERROR_MESSAGES,
+  SUCCESS_MESSAGES,
+} = require("../config/constants");
 const { Op } = require("sequelize");
 
 // get cart by user id
@@ -115,7 +119,7 @@ const updateCartItem = async (cartId) => {
 
     res.status(HTTP_STATUS.OK).json({
       success: true,
-      message: "Cart item updated",
+      message: SUCCESS_MESSAGES.CART_ITEM_UPDATED,
     });
   } catch (error) {
     next(error);
@@ -132,7 +136,7 @@ const removeFromCart = async (req, res, next) => {
     if (!cartItem) {
       return res.status(HTTP_STATUS.NOT_FOUND).json({
         success: false,
-        message: "Cart item not found",
+        message: ERROR_MESSAGES.CART_ITEM_NOT_FOUND,
       });
     }
 
@@ -144,7 +148,7 @@ const removeFromCart = async (req, res, next) => {
 
     res.status(HTTP_STATUS.OK).json({
       success: true,
-      message: "Item removed from cart",
+      message: SUCCESS_MESSAGES.ITEM_REMOVED_FROM_CART,
     });
   } catch (error) {
     next(error);
@@ -161,7 +165,7 @@ const clearCart = async (req, res, next) => {
     if (!cart) {
       return res.status(HTTP_STATUS.NOT_FOUND).json({
         success: false,
-        message: "Cart not found",
+        message: ERROR_MESSAGES.CART_NOT_FOUND,
       });
     }
 
@@ -170,7 +174,7 @@ const clearCart = async (req, res, next) => {
 
     res.status(HTTP_STATUS.OK).json({
       success: true,
-      message: "Cart cleared",
+      message: SUCCESS_MESSAGES.CART_CLEARED,
     });
   } catch (error) {
     next(error);

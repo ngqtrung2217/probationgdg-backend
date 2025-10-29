@@ -68,6 +68,9 @@ const ERROR_MESSAGES = {
   USER_ALREADY_EXISTS: "Người dùng đã tồn tại",
   USER_DONT_HAVE_SHOP: "Người dùng không có cửa hàng",
   REVIEW_NOT_FOUND: "Đánh giá không tìm thấy",
+  ORDER_NOT_FOUND: "Đơn hàng không tìm thấy",
+  CANNOT_CANCEL_ORDER: "Không thể hủy đơn hàng này",
+  TREND_NOT_FOUND: "Xu hướng không tìm thấy",
 };
 
 const SUCCESS_MESSAGES = {
@@ -86,6 +89,10 @@ const SUCCESS_MESSAGES = {
   REVIEW_REJECTED: "Đánh giá đã bị từ chối",
   REVIEW_DELETED: "Đánh giá đã bị xóa",
   SHOP_DELETED: "Cửa hàng đã bị xóa",
+  TREND_CREATED: "Xu hướng được tạo thành công",
+  TREND_UPDATED: "Xu hướng được cập nhật thành công",
+  TREND_DELETED: "Xu hướng đã bị xóa",
+  TREND_CLICK_TRACKED: "Theo dõi lượt nhấp xu hướng thành công",
 };
 
 module.exports = {

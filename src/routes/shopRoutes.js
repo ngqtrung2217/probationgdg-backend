@@ -38,7 +38,7 @@ router.get("/:id", ShopController.getShop);
 router.post(
   "/",
   authenticate,
-  authorize(["customer", "vendor"]),
+  authorize(["customer", "vendor", "admin"]),
   uploadMultiple,
   handleUploadError,
   [
